@@ -9,7 +9,7 @@ router.register('categories', views.CategoryViewSet)
 
 
 urlpatterns = [
-    path('comments/', views.CommentListCreateView.as_view()),
-    path('comments/<int:pk>/', views.CommentDetailView.as_view()),
+    # path('comments/', views.CommentListCreateView.as_view()),
+    # path('comments/<int:pk>/', views.CommentDetailView.as_view()),
     path('', include(router.urls))
 ]

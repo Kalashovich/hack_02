@@ -1,6 +1,7 @@
 from main_project.celery import app
 from django.core.mail import send_mail
 
+
 @app.task
 def send_activation_code(to_email, code):
     full_link = f'http://localhost:8000/api/v1/account/activate/{code}/'
