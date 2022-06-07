@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 
 from rest_framework import status as st
 from . import serializers
-from .models import  Order
+from .models import Order
 
 
 class CreateOrderView(generics.CreateAPIView):

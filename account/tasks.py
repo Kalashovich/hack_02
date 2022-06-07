@@ -8,6 +8,6 @@ def send_activation_code(to_email, code):
         'Здавствуйте активируйте ваш аккаунт!',
         f'Чтобы активировать ваш аккаунт нужно перейти по ссылке: {full_link}',
         'from@example.com',
-        [to_email,],
+        [to_email],
         fail_silently=False,
     )

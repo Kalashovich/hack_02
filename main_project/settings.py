@@ -48,13 +48,13 @@ INSTALLED_APPS = [
     'rest_auth',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
+    'drf_yasg',
 
     #my_apps
     'account',
     'order',
     'product',
     'rating',
-    'basket',
 
 
 ]
@@ -208,3 +208,5 @@ CELERY_RESULT_BACKEND = "redis://" + REDIS_HOST + ":" + REDIS_PORT + "/0"
 CELERY_ACCEPT_CONTENT = ["application/json"]
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
+
+

@@ -20,7 +20,7 @@ class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **kwargs):
         kwargs.setdefault('is_staff', False)
         kwargs.setdefault('is_superuser', False)
-        return self._create_user(email,password, **kwargs)
+        return self._create_user(email, password, **kwargs)
 
     def create_superuser(self, email, password, **kwargs):
         kwargs.setdefault('is_staff', True)
@@ -54,8 +54,8 @@ class CustomUser(AbstractUser):
         default=False,
         help_text=_(
             'Designates whether this user should be treated as active.'
-            'Unselect this instead of deleting accounts.')
-    )
+            'Unselect this instead of deleting accounts.'
+        ))
 
     def __str__(self):
         return self.email

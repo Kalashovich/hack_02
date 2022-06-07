@@ -7,6 +7,7 @@ from django.db.models.signals import post_save
 
 from account.confirmations_email import send_notification
 
+
 User = get_user_model()
 STATUS_CHOICES = (
     ('open', 'Открыт'),

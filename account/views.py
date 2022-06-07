@@ -23,6 +23,7 @@ class RegistrationApiView(APIView):
         if serializer.is_valid(raise_exception=True):
             user = serializer.save()
             if user:
+                # send_activation_code(user)
                 send_activation_code.delay(user.email, user.activation_code)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(status=status.HTTP_400_BAD_REQUEST)
