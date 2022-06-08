@@ -54,7 +54,6 @@ class NewPasswordView(APIView):
 
 
 class ResetPasswordView(APIView):
-
     def post(self, request):
         serializer = serializers.PasswordResetSerizlizer(data=request.data)
         if serializer.is_valid(raise_exception=True):

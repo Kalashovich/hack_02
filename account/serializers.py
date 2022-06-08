@@ -80,18 +80,18 @@ class CreateNewPasswordSerializer(serializers.Serializer):
 
     def save(self, **kwargs):
         data = self.validated_data
+        print(data)
         user = data['user']
 
-        user.set_password(data(['password']))
+        user.set_password(data['password'])
         user.activation_code = ''
         user.save()
-
         return user
 
 
 class PasswordResetSerizlizer(serializers.Serializer):
     email = serializers.EmailField(
-        max_length=25,
+        max_length=50,
         required=True,
     )
 
